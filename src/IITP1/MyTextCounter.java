@@ -22,7 +22,7 @@ public class MyTextCounter {
         System.out.println("Antal rader: " + lineCount);
         System.out.println("Antal tecken: " + characterCount);
 
-        dfgdfg
+
     }
 
 }

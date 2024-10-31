@@ -32,6 +32,6 @@ public class MyTextCounterTest {
         stats.addLine("");
         assertEquals(1, stats.getLineCount());
         assertEquals(0, stats.getWordCount());
-        dfgdfg
+
     }
 }
