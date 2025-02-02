@@ -36,3 +36,4 @@ public class MorseClassTest {
         assertTrue(exception.getMessage().startsWith("Ogiltig morsekod:"));
     }
 }
+

@@ -9,6 +9,7 @@ public class MainClass {
         System.out.println("Välj ett alternativ:");
         System.out.println("1. För att omvandla text till morsekod");
         System.out.println("2. För att omvandla morsekod till text");
+        System.out.println("3. För att avsluta");
 
         int choice = scanner.nextInt();
         scanner.nextLine();
