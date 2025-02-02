@@ -3,7 +3,7 @@ package Inlamingsuppgifter;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MorseCodeLogi {
+public class MorseClassLogi {
     private static final Map<Character, String> tomorse = new HashMap<>();
     private static final Map<String, Character> totext = new HashMap<>();
 

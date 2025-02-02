@@ -7,23 +7,23 @@ public class MorseClassTest {
 
     @Test
     public void testTextToMorse() {
-        assertEquals(".... . .-.. .-.. ---", MorseCodeLogi.textToMorse("HELLO"));
+        assertEquals(".... . .-.. .-.. ---", MorseClassLogi.textToMorse("HELLO"));
     }
 
     @Test
     public void testMorseToText() {
-        assertEquals("HELLO", MorseCodeLogi.morseToText(".... . .-.. .-.. ---"));
+        assertEquals("HELLO", MorseClassLogi.morseToText(".... . .-.. .-.. ---"));
     }
     // Testar att små bokstäver hanteras korrekt och omvandlas till morsekod.
     @Test
     public void testLowercaseTextToMorse() {
-        assertEquals(".-- --- .-. .-.. -..", MorseCodeLogi.textToMorse("world"));
+        assertEquals(".-- --- .-. .-.. -..", MorseClassLogi.textToMorse("world"));
     }
     // Testar om en blandning av text och morsekod kastar ett undantag.
     @Test
     public void testMixedInputTextToMorse() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            MorseCodeLogi.textToMorse("HELLO ... --- ...");
+            MorseClassLogi.textToMorse("HELLO ... --- ...");
         });
         assertTrue(exception.getMessage().startsWith("Ogiltigt tecken i texten:"));
     }
@@ -31,7 +31,7 @@ public class MorseClassTest {
     @Test
     public void testInvalidMorseCode() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            MorseCodeLogi.morseToText(".... --- .-- --..--");
+            MorseClassLogi.morseToText(".... --- .-- --..--");
         });
         assertTrue(exception.getMessage().startsWith("Ogiltig morsekod:"));
     }

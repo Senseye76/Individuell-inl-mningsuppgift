@@ -7,8 +7,8 @@ public class MainClass {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Välj ett alternativ:");
-        System.out.println("1. Omvandla text till morsekod");
-        System.out.println("2. Omvandla morsekod till text");
+        System.out.println("1. För att omvandla text till morsekod");
+        System.out.println("2. För att omvandla morsekod till text");
 
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -18,7 +18,7 @@ public class MainClass {
                 System.out.print("Ange text: ");
                 String text = scanner.nextLine();
                 try {
-                    String morse = MorseCodeLogi.textToMorse(text);
+                    String morse = MorseClassLogi.textToMorse(text);
                     System.out.println("Morsekod: " + morse);
                 } catch (IllegalArgumentException e) {
                     System.out.println("Fel: " + e.getMessage());
@@ -28,7 +28,7 @@ public class MainClass {
                 System.out.print("Ange morsekod (separera bokstäver med mellanslag): ");
                 String morse = scanner.nextLine();
                 try {
-                    String convertedText = MorseCodeLogi.morseToText(morse);
+                    String convertedText = MorseClassLogi.morseToText(morse);
                     System.out.println("Översatt text: " + convertedText);
                 } catch (IllegalArgumentException e) {
                     System.out.println("Fel: " + e.getMessage());
