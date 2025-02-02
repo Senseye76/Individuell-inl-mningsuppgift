@@ -3,7 +3,7 @@ package Inlamingsuppgifter;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class MorseCodeTest {
+public class MorseClassTest {
 
     @Test
     public void testTextToMorse() {
