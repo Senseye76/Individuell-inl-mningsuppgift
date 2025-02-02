@@ -35,10 +35,13 @@ public class MainClass {
                     System.out.println("Fel: " + e.getMessage());
                 }
                 break;
+            case 3:
+                System.out.println("Avslutar programmet...");
+                scanner.close();
+                return; // Avslutar programmet
             default:
-                System.out.println("Ogiltigt val!");
+                System.out.println("Ogiltigt val! Vänligen välj 1, 2 eller 3.");
         }
-
         scanner.close();
     }
 }
