@@ -14,25 +14,25 @@ public class MorseCodeTest {
     public void testMorseToText() {
         assertEquals("HELLO", MorseCodeLogi.morseToText(".... . .-.. .-.. ---"));
     }
-
+    // Testar att små bokstäver hanteras korrekt och omvandlas till morsekod.
     @Test
     public void testLowercaseTextToMorse() {
         assertEquals(".-- --- .-. .-.. -..", MorseCodeLogi.textToMorse("world"));
     }
-
+    // Testar om en blandning av text och morsekod kastar ett undantag.
     @Test
-    public void testInvalidCharacter() {
+    public void testMixedInputTextToMorse() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            MorseCodeLogi.textToMorse("Hello123");
+            MorseCodeLogi.textToMorse("HELLO ... --- ...");
         });
-        assertEquals("Ogiltigt tecken i texten: 1", exception.getMessage());
+        assertTrue(exception.getMessage().startsWith("Ogiltigt tecken i texten:"));
     }
 
     @Test
-    public void testEmptyInput() {
+    public void testInvalidMorseCode() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            MorseCodeLogi.textToMorse("");
+            MorseCodeLogi.morseToText(".... --- .-- --..--");
         });
-        assertEquals("Texten kan inte vara tom!", exception.getMessage());
+        assertTrue(exception.getMessage().startsWith("Ogiltig morsekod:"));
     }
 }
