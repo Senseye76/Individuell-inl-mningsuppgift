@@ -23,6 +23,8 @@ class MorseLogi {
             morseMap.put(letters[i], morse[i]);
             reverseMorseMap.put(morse[i], letters[i]);
         }
+        morseMap.put(" ", "/");
+        reverseMorseMap.put("/", " ");
     }
 
     public String textToMorse(String text) {

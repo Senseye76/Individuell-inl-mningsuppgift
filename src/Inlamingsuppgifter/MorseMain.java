@@ -2,7 +2,7 @@ package Inlamingsuppgifter;
 
 import java.util.Scanner;
 
-public class MoresMain {
+public class MorseMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         MorseLogi morseLogi = new MorseLogi();
