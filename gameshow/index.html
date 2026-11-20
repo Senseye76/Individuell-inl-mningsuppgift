@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sverige 2026 – Jeopardy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Startskärm: välj lag -->
+  <section id="setup" class="screen">
+    <h1>Sverige 2026</h1>
+    <p class="subtitle">Jeopardy – vad hände i Sverige i år?</p>
+    <div id="team-inputs"></div>
+    <div class="row">
+      <button id="add-team" class="secondary">+ Lägg till lag</button>
+      <button id="start">Starta spelet</button>
+    </div>
+  </section>
+
+  <!-- Spelbrädet -->
+  <section id="game" class="screen hidden">
+    <div id="board"></div>
+    <div id="scores"></div>
+  </section>
+
+  <!-- Frågerutan -->
+  <div id="modal" class="hidden">
+    <div class="card">
+      <p id="modal-category"></p>
+      <h2 id="modal-question"></h2>
+      <div id="timer">30</div>
+      <p id="modal-answer" class="hidden"></p>
+      <button id="show-answer">Visa svar</button>
+      <div id="award" class="hidden">
+        <p>Vem svarade rätt?</p>
+        <div id="award-buttons"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slutskärm -->
+  <section id="end" class="screen hidden">
+    <h1>Spelet är slut!</h1>
+    <h2 id="winner"></h2>
+    <div id="final-scores"></div>
+    <button id="restart">Spela igen</button>
+  </section>
+
+  <script src="questions.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
